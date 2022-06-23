@@ -1,16 +1,14 @@
 module.exports = function check(str, bracketsConfig) {
-  
-let pairs = bracketsConfig.map(arr => arr.join('')); 
+
+  let pairs = bracketsConfig.map(arr => arr.join('')); 
 //создаем пары вида () из массивов "скобок"
   
   while (pairs.length) {
-
     let i = 0;
 
     for (let item of pairs) {
       if (str.indexOf(item) > -1) {
-        str = str.replace(item, '')
-        console.log(str)
+        str = str.replace(item, '');
       } else {i++}
     }
 
